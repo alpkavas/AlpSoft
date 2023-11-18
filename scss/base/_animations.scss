@@ -1,0 +1,41 @@
+@keyframes ani-nav-bottom {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  100% {
+    top: 2rem;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes ani-nav-button {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+@keyframes ani-nav-button-before {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(6px);
+  }
+  100% {
+    transform: translateY(6px) rotate(-45deg);
+  }
+}
+@keyframes ani-nav-button-after {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(-6px) rotate(45deg);
+  }
+}

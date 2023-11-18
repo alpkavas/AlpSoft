@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* rem base */
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 90%;
+  }
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $color-text;
+  overflow-x: hidden;
+}

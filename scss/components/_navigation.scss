@@ -1,0 +1,172 @@
+.navigation {
+  position: relative;
+  display: flex;
+  width: 90%;
+  justify-content: flex-end;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    padding: 4px;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    height: 2rem;
+    width: 2.5rem;
+    background-color: $color-primary;
+    border-radius: 4px;
+
+    @media screen and (max-width: 768px) {
+      visibility: visible;
+    }
+  }
+  &__lines {
+    width: 1.4rem;
+    height: 2.5px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 1.4rem;
+      height: 2.5px;
+      display: block;
+      background-color: white;
+    }
+
+    &::before {
+      top: -6px;
+    }
+    &::after {
+      top: 6px;
+    }
+  }
+  .nav-top {
+    flex: 0 0 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+
+    &__list {
+      list-style: none;
+      flex: 0 0 80%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &__link {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0;
+        height: 3px;
+        background-color: $color-primary;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:link,
+      &:visited,
+      &:active {
+        font-size: 0.8rem;
+        color: rgba(black, 0.7);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      &:hover,
+      &:active {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .nav-bottom {
+    visibility: hidden;
+    user-select: none;
+    width: 100%;
+    height: 24rem;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    box-shadow: 0 2px 5px 2px rgba($color: #000000, $alpha: 0.2);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    padding: 2rem 0;
+    position: absolute;
+    top: 2.4rem;
+    left: 0;
+    z-index: 20;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &__list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__link {
+      display: block;
+      &,
+      &:link,
+      &:visited {
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: white;
+        padding: 0.5rem 0;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      &:hover,
+      &:active {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  &__checkbox:checked ~ .nav-bottom {
+    animation: ani-nav-bottom 0.4s ease-in 0.2s;
+    animation-fill-mode: forwards;
+    display: flex;
+  }
+  // Checkbox Animations Start
+  &__checkbox:checked + &__button &__lines {
+    animation: ani-nav-button 0.3s;
+    animation-fill-mode: forwards;
+  }
+  &__checkbox:checked + &__button &__lines::before {
+    animation: ani-nav-button-before 0.5s;
+    animation-fill-mode: forwards;
+  }
+  &__checkbox:checked + &__button &__lines::after {
+    animation: ani-nav-button-after 0.5s;
+    animation-fill-mode: forwards;
+  }
+  // Checkbox Animations End
+}

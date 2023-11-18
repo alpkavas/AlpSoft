@@ -1,0 +1,128 @@
+.card {
+  height: 80%;
+  width: 30%;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2rem 2.5rem rgba($color: #000000, $alpha: 0.3);
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    height: 100%;
+    padding: 0 0 10px 0;
+    width: 60%;
+    margin-bottom: 50px;
+  }
+  &__top {
+    flex: 0 45%;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(75, 139, 190, 0.9),
+      rgba(173, 216, 230, 0.3)
+    );
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+  &__bottom {
+    flex: 0 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__img {
+    font-size: 4rem;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    line-height: 1;
+  }
+  &__title {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+  &__price {
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    font-size: 2.7rem;
+    sup {
+      font-size: 1rem;
+    }
+  }
+  &__packet {
+    font-size: 1.1rem;
+  }
+  &__list {
+    list-style: none;
+    width: 80%;
+  }
+  &__item {
+    color: #404040;
+    padding-top: 1rem;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    span:last-child {
+      font-weight: bold;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &:nth-child(2) {
+    transform: scale(1.1);
+    position: relative;
+    &::before {
+      content: url("../img/money.png");
+      position: absolute;
+      top: 33%;
+      right: 5%;
+      z-index: 10;
+      @media (max-width: 768px) {
+        transform: scale(1);
+        top: 40%;
+        right: 5%;
+      }
+    }
+    &::after {
+      content: "Best\a🔥\a Price";
+      white-space: pre;
+      position: absolute;
+      top: 34.5%;
+      right: 7.5%;
+      z-index: 15;
+      font-weight: 600;
+      color: #0e6ba8;
+      line-height: 1;
+      text-align: center;
+      @media (max-width: 768px) {
+        top: 42.5%;
+        right: 12%;
+        text-align: center;
+      }
+    }
+  }
+  &--orange {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(255, 99, 71, 0.9),
+      rgba(255, 192, 203, 0.3)
+    );
+  }
+  &--blue {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 128, 0.9),
+      rgba(0, 0, 255, 0.3)
+    );
+  }
+}

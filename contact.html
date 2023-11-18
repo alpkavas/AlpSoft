@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./img/block-576503.png"
+      type="image/x-icon" />
+    <!-- ========== Start Google Font ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;800&family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet" />
+    <!-- ========== End Google Font ========== -->
+    <!-- ========== Start Fontawesome Section ========== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <!-- ========== End Fontawesome Section ========== -->
+    <title>AlpSoft</title>
+  </head>
+  <body>
+    <div class="container-contactpage">
+      <header class="header">
+        <img src="./img/logo.png" alt="logo" class="header__img" />
+        <div class="navigation">
+          <input type="checkbox" class="navigation__checkbox" id="navigation__checkbox">
+          <label for="navigation__checkbox" class="navigation__button">
+            <span class="navigation__lines"></span>
+          </label>
+          <nav class="nav-top">
+            <ul class="nav-top__list">
+              <li class="nav-top__item">
+                <a href="index.html" class="nav-top__link">Ana Sayfa</a>
+              </li>
+              <li class="nav-top__item">
+                <a href="#" class="nav-top__link">HİZMETLERİMİZ</a>
+              </li>
+              <li class="nav-top__item">
+                <a href="#" class="nav-top__link">Hakkımızda</a>
+              </li>
+              <li class="nav-top__item">
+                <a href="#" class="nav-top__link">Referanslarımız</a>
+              </li>
+              <li class="nav-top__item">
+                <a href="#" class="nav-top__link">Blog</a>
+              </li>
+              <li class="nav-top__item">
+                <a href="contact.html" class="nav-top__link">İletişim</a>
+              </li>
+            </ul>
+            <button class="button"><span>Login</span><span>Login</span></button>
+          </nav>
+          <nav class="nav-bottom">
+            <ul class="nav-bottom__list">
+              <li class="nav-bottom__item">
+                <a href="index.html" class="nav-bottom__link">Ana Sayfa</a>
+              </li>
+              <li class="nav-bottom__item">
+                <a href="#" class="nav-bottom__link">HİZMETLERİMİZ</a>
+              </li>
+              <li class="nav-bottom__item">
+                <a href="#" class="nav-bottom__link">Hakkımızda</a>
+              </li>
+              <li class="nav-bottom__item">
+                <a href="#" class="nav-bottom__link">Referanslarımız</a>
+              </li>
+              <li class="nav-bottom__item">
+                <a href="#" class="nav-bottom__link">Blog</a>
+              </li>
+              <li class="navigation__item">
+                <a href="contact.html" class="nav-bottom__link">İletişim</a>
+              </li>
+            </ul>
+            <button class="button button--middle"><span>Login</span><span>Login</span></button>
+          </nav>
+        </div>
+        <div class="header__social-nav">
+          <nav class="social-nav">
+            <ul class="social-nav__list">
+              <li class="social-nav__item">
+                <a href="" class="social-nav__link"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+              </li>
+              <li class="social-nav__item">
+                <a href="" class="social-nav__link"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+              <li class="social-nav__item">
+                <a href="" class="social-nav__link"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+              </li>
+              <li class="social-nav__item">
+                <a href="" class="social-nav__link"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="contact__page">
+        <div class="contact__page-left">
+            <form class="form">
+                <h1 class="form__head">Bize Ulaşın</h1>
+                <input class="form__input" type="text" placeholder="Ad Soyad" required>
+                <input class="form__input" type="email" placeholder="Example: info@info.com" required>
+                <select class="form__input" name="select" >
+                    <option value="" disabled selected>Lütfen bir konu seçin</option>
+                    <option value="">Arıza</option>
+                    <option value="">Sipariş</option>
+                    <option value="">Yardım</option>
+                    <option value="">Diğer</option>
+                </select>
+                <textarea style="resize: none;" class="form__input"  cols="30" rows="10" placeholder="Mesajınız"></textarea>
+                <button class="button"><span>Gönder</span><span>Gönder</span></button>
+            </form>
+        </div>
+        <div class="contact__page-right">
+            <div style="width: 100%"><iframe class="contact__page__frame" width="720" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=en&amp;q=enver%20pa%C5%9Fa%20an%C4%B1t%C4%B1+()&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/population/">Population Estimator map</a></iframe></div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

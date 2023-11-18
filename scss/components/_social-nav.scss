@@ -1,0 +1,25 @@
+.social-nav {
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__link {
+    &:visited,
+    &:link {
+      padding: 0.5rem;
+      text-decoration: none;
+    }
+    &:hover,
+    &:active {
+      i {
+        color: $color-primary;
+      }
+    }
+  }
+  i {
+    width: 1rem;
+    height: 1rem;
+    color: $color-secondary;
+  }
+}

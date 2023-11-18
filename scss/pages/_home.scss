@@ -1,0 +1,332 @@
+.sec-info {
+  padding: 4rem 6rem 1rem 6rem;
+  height: 39rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    height: 30rem;
+    padding: 1rem 1.5rem;
+  }
+
+  &__container {
+    display: flex;
+    height: 100%;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  &__left {
+    flex: 0 0 50%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    @media screen and (max-width: 768px) and (max-width: 1024px) {
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &__right {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+  &__img {
+    width: 90%;
+    height: 90%;
+
+    @media screen and (max-width: 768px) {
+      width: 90%;
+      height: 90%;
+    }
+  }
+}
+
+.sec-features {
+  min-height: 50rem;
+  padding: 4rem 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    min-height: 10rem;
+    padding: 1rem 1rem;
+  }
+  &__top {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-top: 7rem;
+    }
+  }
+  &__bottom {
+    display: flex;
+    min-height: 32rem;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__feature {
+    height: 13rem;
+    width: 27%;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-top: 50px;
+    }
+  }
+  &__icon {
+    color: $color-primary;
+    font-size: 2rem;
+  }
+}
+
+.sec-flow {
+  height: 68rem;
+  padding: 4rem 0rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f8ff;
+
+  @media (max-width: 768px) {
+    min-height: 50rem;
+    padding: 1rem 0 10rem 0;
+  }
+
+  &__top {
+    height: 6rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+  &__bottom {
+    flex: 0 85%;
+    display: flex;
+  }
+
+  &-box {
+    height: 10rem;
+    width: 80%;
+    @media screen and (max-width: 768px) {
+      width: 90%;
+      margin-top: 10px;
+    }
+
+    &__icon {
+      font-size: 4rem;
+      border-radius: 50%;
+      border: 4px solid #1f77b4;
+      padding: 18px;
+      box-shadow: 2px 2px 5px rgba($color-black, 0.4);
+      text-align: center;
+      shape-outside: circle(50%);
+      float: left;
+      margin: 0 1rem;
+      @media screen and (max-width: 768px) {
+        padding: 12px;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__line {
+    width: 4px;
+    background-color: #1f77b4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__circle {
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    background-color: #1f77b4;
+    display: block;
+    @media screen and (max-width: 768px) {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  &__linebox {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  &__left {
+    flex: 0 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__right {
+    flex: 0 48%;
+  }
+}
+
+.sec-counter {
+  height: 40rem;
+  padding: 3rem 6rem;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+      to bottom,
+      rgba($color-primary, 0.4),
+      rgba(#3498db, 0.3)
+    ),
+    url(../img/work.jpg);
+  background-size: cover;
+
+  @media (max-width: 768px) {
+    height: 40rem;
+    padding: 1rem 0 1rem 0;
+  }
+
+  &__container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__top {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      text-align: justify;
+    }
+  }
+  &__bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.sec-card {
+  height: 55rem;
+  padding: 4rem 5rem 2rem 5rem;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 768px) {
+    height: 100%;
+    padding: 0;
+    width: 100%;
+  }
+
+  &__cards {
+    width: 100%;
+    flex: 0 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 768px) {
+      height: 100%;
+
+      flex: 0 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.sec-feed {
+  height: 35rem;
+  background-image: linear-gradient(
+      to bottom,
+      rgba($color-white, 0.6),
+      rgba($color-white, 0.5)
+    ),
+    url("../img/backg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+
+  &__header {
+    font-family: "Nunito", sans-serif;
+    font-weight: 200;
+    font-size: 3.5rem;
+    color: #f0f0f0;
+    letter-spacing: 2px;
+    text-shadow: 4px 3px #1f77b4;
+  }
+}
+
+.sec-comment {
+  height: 45rem;
+  padding: 4rem 3rem;
+  background-color: rgba($color: #7684a2, $alpha: 0.3);
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 768px) {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__top {
+    flex: 0 20%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: $color-header;
+    text-shadow: 2px 2px rgba($color: #000000, $alpha: 0.1);
+  }
+  &__bottom {
+    flex: 0 80%;
+    display: flex;
+    justify-content: space-around;
+    @media (max-width: 768px) {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+    }
+  }
+}

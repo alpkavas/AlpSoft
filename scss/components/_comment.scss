@@ -1,0 +1,60 @@
+.comment {
+  height: 24rem;
+  width: 20%;
+  position: relative;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  &__content {
+    padding: 5rem 2rem;
+    background-color: rgba($color: #fff, $alpha: 0.8);
+    height: 100%;
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 25% 100%, 0 75%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    &::before {
+      content: "⭐⭐⭐⭐⭐";
+      font-size: 1.2rem;
+      position: absolute;
+      top: 8%;
+      left: 10%;
+    }
+  }
+  &__img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    box-shadow: -5px 3px 4px 2px rgba($color: #000000, $alpha: 0.3);
+    z-index: 15;
+    position: absolute;
+    right: 0%;
+    top: -5%;
+  }
+
+  &__parag {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #504f4f;
+    text-align: justify;
+  }
+  &__author {
+    font-family: "Nunito", sans-serif;
+    font-weight: 200;
+    text-align: right;
+    letter-spacing: 1px;
+    font-size: 1rem;
+  }
+  &:nth-child(2n) {
+    align-self: flex-end;
+  }
+  &-box {
+    filter: drop-shadow(-1px 6px 5px rgba(#323200, 0.5));
+    -webkit-filter: drop-shadow(-1px 6px 5px rgba(#323200, 0.5));
+    height: 100%;
+  }
+}
